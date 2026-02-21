@@ -52,7 +52,11 @@ export default function JobsList({ jobs, candidate }) {
       } else {
         setStatusByJobId((prev) => ({
           ...prev,
-          [jobId]: { loading: false, error: "", ok: true },
+          [jobId]: {
+            loading: false,
+            error: res?.message || "Application failed",
+            ok: false,
+          },
         }));
       }
     } catch (e) {
