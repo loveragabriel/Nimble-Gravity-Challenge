@@ -41,6 +41,7 @@ export default function JobsList({ jobs, candidate }) {
         uuid: candidate.uuid,
         jobId,
         candidateId: candidate.candidateId,
+        applicationId: candidate.applicationId,
         repoUrl,
       });
 
